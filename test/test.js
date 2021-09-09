@@ -1,30 +1,13 @@
-import {
+//test
+
+const {
     h,
     cloneVNode,
-} from '../h.js';
-import {
-    Component
-} from '../Component.js';
-
-import {
-    createApp
-} from '../createApp.js';
-import {
+    createApp,
+    Component,
     reactive,
     effect,
-} from '../reactive.js';
-import {
-    mount
-} from '../mount.js';
-
-import {
-    patch
-} from '../patch.js';
-import {
-    qs
-} from '../domFuncs.js';
-
-//test
+} = myVue;
 
 // let vnode1 = h('div', {
 //     class: 'class1',
@@ -51,20 +34,7 @@ let comp1 = new Component({
         style: item % 2 === 0 ? 'background-color: pink;' : 'background-color: gold;',
     }, [this.array[index] + ''])));
 });
-
-let comp2 = new Component({
-    array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-}, function() {
-    return h('div', {
-        style: 'width: 500px; height: 500px; background-color: silver; display: grid; grid-template-columns: 1fr 1fr 1fr;',
-    }, this.array.map((item, index) => h('div', {
-        style: item % 2 === 0 ? 'background-color: pink;' : 'background-color: gold;',
-    }, [this.array[index] + ''])));
-});
-
 createApp(comp1, '#app1');
-createApp(comp2, '#app2');
-
 function shuffle(arr) {
     let cur = arr.length - 1;
     while (cur > 0) {

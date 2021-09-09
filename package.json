@@ -1,0 +1,34 @@
+{
+  "name": "MyVue",
+  "version": "1.0.0",
+  "description": "MyVue by Marswiz",
+  "main": "myVue.js",
+  "author": "Marswiz",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marswiz/myVue.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marswiz/myVue/issues"
+  },
+  "homepage": "https://github.com/Marswiz/myVue#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@webpack-cli/generators": "^2.3.0",
+    "babel-loader": "^8.2.2",
+    "bable-loader": "^0.0.1-security",
+    "webpack": "^5.52.0"
+  }
+}

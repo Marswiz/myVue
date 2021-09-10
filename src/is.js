@@ -23,10 +23,16 @@ function isEmpty(e) {
     }
 }
 
+function isSameVNode(v1, v2) {
+    return v1._.type === v2._.type;
+    // && v1.props.key === v2.props.key
+}
+
 export {
     getType,
     isHtmlElement,
     isString,
     isEmpty,
     isUndef,
+    isSameVNode,
 };

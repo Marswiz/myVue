@@ -12,7 +12,9 @@ import {
 import {
     getMaxSequence,
 } from './utils.js';
-import { isUndef } from './is.js';
+import {
+    isUndef
+} from './is.js';
 
 function replace(v1, v2) {
     if ((v1._.type & VNode.TYPE.TEXT) && (v2._.type & VNode.TYPE.TEXT)) {
@@ -21,7 +23,7 @@ function replace(v1, v2) {
         return;
     }
     let parent = v1._.el.parentNode;
-    let anchor = v1._.el.nextSibling ?? void 0;
+    let anchor = v1._.el.nextSibling || void 0;
     parent.removeChild(v1._.el);
     mount(v2, parent, anchor);
 }
@@ -73,7 +75,7 @@ function patch(v1, v2) {
                     }
                 }
 
-                if (v2._.el === null) console.log(v1,v2);
+                if (v2._.el === null) console.log(v1, v2);
                 // max sequence algorithum.
             }
         }

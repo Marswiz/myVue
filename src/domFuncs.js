@@ -82,6 +82,11 @@ function rmAttr(elem, attr) {
     elem.removeAttribute(attr);
 }
 
+function move(elem, container, anchor) {
+    rm(elem, container);
+    insert(elem, container, anchor);
+}
+
 export {
     ce,
     cf,
@@ -92,6 +97,7 @@ export {
     insert,
     append,
     setAttr,
+    move,
 };
 
 // // test

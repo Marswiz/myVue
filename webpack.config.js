@@ -1,11 +1,8 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
-
-const isProduction = false;
-
-
 const config = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         filename: 'myVue.js',
@@ -29,9 +26,7 @@ const config = {
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    devtool: 'source-map',
 };
 
-module.exports = () => {
-    config.mode = 'development';
-    return config;
-};
+module.exports = config;

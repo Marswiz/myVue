@@ -9,7 +9,7 @@ import {
 
 import {
     patch
-} from './patch.js';
+} from './patch_maxSequence.js';
 
 function createApp(component, container) {
     let mounted = false;

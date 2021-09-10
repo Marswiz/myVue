@@ -26,4 +26,24 @@ My attempt to accomplish a Vue.js
   - define a Component class;
 - **createApp.js**
   - render a component to DOM container and keep it's `[data]` reactive;
->>>>>>> 4a45fe42cad5ef99ba5bd79b694800c9d5058c71
+
+# APIs
+
+> main file location (for Browser): `./dist/myVue.js` 
+
+window.myVue:
+- **h(tag : string, props : object, children: array):**
+  - Create a VNode. If tag is empty string, VNode type is pure text. Or you will create a element VNode and the tag means the HTMLElement tag.
+  - props is the attributes set onto matching DOM Node;
+  - children are the children VNodes, which must be an array type, a child can be a string (pure text) or a VNode (HTML element). 
+- **createApp(component: Component, container : queryString | HTMLElement):**
+  - mount a component to a app container, and keep it's data reactive;
+- **Component(data : object, render):**
+  - Contructor of a component, you should input a data object which will be reactive after the component is mounted.
+  - render should be function type, and return VNode type to be rendered into the container; 
+- **reactive(obj: object):**
+  - Change an object to reactive object;
+- **effect(fn: function):**
+  - run a function as effect, which means that all the reactive objects it used inside itself will track the function as an effect in their own deps.
+- **cloneVNode:**
+  - cloneVNode from one to another;
